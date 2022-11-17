@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="css/ahorcados.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Juego del ahorcado</h1>
+    </header>
+    <main>
+      <img id="imagen" src="img/img0.png" alt="Ahorcado" />
+      <p>Introduce una letra</p>
+
+      <input type="text" maxlength="1" id="letra" placeholder="a, b, c..." />
+
+      <button type="submit" id="calcular">Comprueba la letra</button>
+      <p id="fallos">Letras incorrectas:</p>
+
+      <p id="output"></p>
+
+      <div id="ahorcado"></div>
+
+      <section>
+        <!-- <button class="show-modal">Show Modal</button> -->
+        <span class="overlay"></span>
+
+        <div class="modal-box">
+          <i class="fa-regular fa-circle-check"></i>
+          <p id="message"></p>
+          <div class="buttons">
+            <button class="play-again">Volver a jugar</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/ahorcado.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  background: url(img/fondo.jpg);
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  background: black;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+}
+
+main {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  justify-content: center;
+}
+
+#imagen {
+  width: 200px;
+}
+
+#fallos {
+  font-weight: bold;
+  box-sizing: border-box;
+  height: 60%;
+  border: solid #403dda 2px;
+  background-color: aqua;
+  border-radius: 10px;
+  padding: 7px;
+  color: #933dda;
+}
+
+#output {
+  grid-row: center;
+  color: antiquewhite;
+  font-size: x-large;
+}
+
+#calcular {
+  font-size: x-large;
+  font-weight: bold;
+  box-sizing: border-box;
+  height: 100%;
+  border: solid #933dda 2px;
+  padding: 7px;
+  background-color: pink;
+}
+
+#letra {
+  box-sizing: border-box;
+  height: 100%;
+  border: solid #933dda 2px;
+  padding: 5px;
+}
+
+#introduce {
+  color: antiquewhite;
+}
+
+p {
+  font-size: x-large;
+}
+
+/* section {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  /* background: #e3f2fd; 
+} */
+button {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  padding: 14px 22px;
+  border: none;
+  background: #4070f4;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #265df2;
+}
+button.show-modal,
+.modal-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+section.active .show-modal {
+  display: none;
+}
+/* .overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+} */
+section.active .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 380px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 24px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+section.active .modal-box {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-box i {
+  font-size: 70px;
+  color: #4070f4;
+}
+.modal-box h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+}
+.modal-box h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
+.modal-box .buttons {
+  margin-top: 25px;
+}
+.modal-box button {
+  font-size: 14px;
+  padding: 6px 12px;
+  margin: 0 10px;
+}
