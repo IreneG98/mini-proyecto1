@@ -22,7 +22,7 @@ let contadorFallos = 0;
 document.querySelector('#output').innerHTML = palabraConGuiones;
 
 document.querySelector('#calcular').addEventListener('click', () => {
-  const letra = document.querySelector('#letra').value;
+  const letra = document.querySelector('#letra').value.toLowerCase();
 
   if (letra == '') {
     return;
