@@ -40,8 +40,8 @@ document.querySelector('#calcular').addEventListener('click', () => {
   if (haFallado) {
     contadorFallos++;
     arrFallos.push(letra);
-
-    newArray.textContent = arrFallos;
+let uniqFallos = [...new Set(arrFallos)];
+    newArray.textContent = uniqFallos;
     fallos.append(newArray);
 
     document.querySelector('#imagen').src = `img/img${contadorFallos}.png`;
