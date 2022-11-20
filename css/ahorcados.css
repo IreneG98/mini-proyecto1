@@ -1,102 +1,94 @@
+@font-face {
+  font-family: 'Upheav';
+  src: url(/css/upheavtt.ttf) format('truetype');
+}
+
 body {
   margin: 0;
-  background: url(/img/fondo.jpg);
+  background: url(/img/fondo2.jpg);
   background-size: cover;
-  font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
+  background-position: center center;
+  font-family: 'Upheav';
 }
 
 header {
-  background: black;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-h1 {
   margin: 0;
-  color: white;
+  color: #ad0000;
+  -webkit-text-stroke: 1px black;
+  font-size: 20px;
 }
 
 main {
-  width: 50%;
+  width: 65%;
   margin: auto;
-  padding: 20px;
-  display: grid;
-  gap: 30px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-#imagen {
-  width: 200px;
-}
-
-#fallos {
-  font-weight: bold;
-  box-sizing: border-box;
-  height: 60%;
-  border: solid #403dda 2px;
-  background-color: aqua;
-  border-radius: 10px;
-  padding: 7px;
-  color: #933dda;
-}
-
-#output {
-  grid-row: center;
-  color: antiquewhite;
-  font-size: x-large;
-}
-
-#calcular {
-  font-size: x-large;
-  font-weight: bold;
-  box-sizing: border-box;
-  height: 100%;
-  border: solid #933dda 2px;
-  padding: 7px;
-  background-color: pink;
+#text {
+  font-size: 20px;
+  color: white;
+  -webkit-text-stroke: 1px black;
 }
 
 #letra {
-  box-sizing: border-box;
-  height: 100%;
-  border: solid #933dda 2px;
   padding: 5px;
-}
-
-#introduce {
-  color: antiquewhite;
-}
-
-p {
-  font-size: x-large;
-}
-
-/* section {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  /* background: #e3f2fd; 
-} */
-button {
-  font-size: 18px;
-  font-weight: 400;
-  color: #fff;
-  padding: 14px 22px;
-  border: none;
-  background: #4070f4;
+  box-shadow: inset 0 0 10px;
   border-radius: 6px;
-  cursor: pointer;
+  margin-bottom: 10px;
+}
+#calcular {
+  box-sizing: border-box;
+  border: 2px solid black;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 4px;
+  background: #ad0000;
+  -webkit-text-stroke: 1px black;
+  border-radius: 6px;
+}
+
+#fallos {
+  font-size: 20px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+.div1 {
+  width: 65%;
+  padding: 5px;
+  margin: auto;
+}
+.div2 {
+  font-size: 20px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+/* MODAL */
+
+#message {
+  text-align: center;
+  font-size: 20px;
+}
+button {
+  font-family: 'Upheav';
+  box-sizing: border-box;
+  border: 2px solid black;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 4px;
+  background: #ad0000;
+  -webkit-text-stroke: 1px black;
+  border-radius: 6px;
 }
 button:hover {
-  background-color: #265df2;
+  background-color: #ad0000;
 }
 button.show-modal,
 .modal-box {
@@ -109,14 +101,6 @@ button.show-modal,
 section.active .show-modal {
   display: none;
 }
-/* .overlay {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  pointer-events: none;
-} */
 section.active .overlay {
   opacity: 1;
   pointer-events: auto;
@@ -129,7 +113,11 @@ section.active .overlay {
   width: 100%;
   padding: 30px 20px;
   border-radius: 24px;
-  background-color: #fff;
+  background: rgba(158, 157, 157, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(119, 115, 115, 0.3);
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
@@ -142,7 +130,7 @@ section.active .modal-box {
 }
 .modal-box i {
   font-size: 70px;
-  color: #4070f4;
+  color: #ad0000;
 }
 .modal-box h2 {
   margin-top: 20px;
@@ -163,4 +151,71 @@ section.active .modal-box {
   font-size: 14px;
   padding: 6px 12px;
   margin: 0 10px;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-rows: 20px 1fr;
+    background: url(/img/fondo.png);
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  header {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  #text {
+    font-size: 25px;
+    color: black;
+    -webkit-text-stroke: 0px;
+  }
+
+  #letra {
+    padding: 10px;
+  }
+
+  #calcular {
+    font-size: 25px;
+  }
+
+  #fallos {
+    font-size: 25px;
+    color: black;
+    -webkit-text-stroke: 0px;
+  }
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 4 / 2;
+    justify-items: center;
+    width: 75%;
+    padding: 50px;
+  }
+
+  .div2 {
+    grid-area: 1 / 2 / 2 / 3;
+    padding-right: 50px;
+    padding-top: 80px;
+    font-size: 30px;
+    color: black;
+    -webkit-text-stroke: 0px;
+  }
+
+  .div3 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .div4 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
 }

@@ -14,7 +14,30 @@ const linea = document.querySelector('div p');
 const fallos = document.querySelector('#fallos');
 let arrFallos = new Array();
 const newArray = document.createElement('p');
-const palabras = ['casa', 'perro', 'gato', 'elefante', 'sacapuntas', 'teclado'];
+const palabras = [
+  'casa',
+  'perro',
+  'gato',
+  'elefante',
+  'sacapuntas',
+  'teclado',
+  'silbato',
+  'arroz',
+  'llama',
+  'tanque',
+  'retrato',
+  'levantamiento',
+  'retrovisor',
+  'peaje',
+  'ventilador',
+  'hoja',
+  'terremoto',
+  'obsequio',
+  'desayuno',
+  'tormenta',
+  'ordenador',
+  'carpeta'
+];
 const palabra = palabras[Math.floor(Math.random() * palabras.length)];
 let palabraConGuiones = palabra.replace(/./g, '_ ');
 let contadorFallos = 0;
@@ -40,15 +63,19 @@ document.querySelector('#calcular').addEventListener('click', () => {
   if (haFallado) {
     contadorFallos++;
     arrFallos.push(letra);
-
-    newArray.textContent = arrFallos;
+    let uniqFallos = [...new Set(arrFallos)];
+    newArray.textContent = uniqFallos;
     fallos.append(newArray);
 
     document.querySelector('#imagen').src = `img/img${contadorFallos}.png`;
 
     if (contadorFallos == 6) {
+      const baphomet = document.createElement('img');
+      baphomet.src = '/img/Isaac.lose(Baphomet).png';
+      linea.append(baphomet);
+
       const lose = document.createElement('p');
-      lose.textContent = `Has perdido, la palabra era: ${palabra}.`;
+      lose.textContent = `Has perdido, la palabra era ${palabra}.`;
       linea.append(lose);
 
       section.classList.add('active');
@@ -57,6 +84,10 @@ document.querySelector('#calcular').addEventListener('click', () => {
     }
   } else {
     if (palabraConGuiones.indexOf('_') < 0) {
+      const uriel = document.createElement('img');
+      uriel.src = '/img/Isaac.win(Uriel).png';
+      linea.append(uriel);
+
       const win = document.createElement('p');
       win.textContent = `Has ganado.`;
       linea.append(win);
