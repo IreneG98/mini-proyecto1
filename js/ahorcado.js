@@ -75,7 +75,7 @@ document.querySelector('#calcular').addEventListener('click', () => {
       linea.append(baphomet);
 
       const lose = document.createElement('p');
-      lose.textContent = `Has perdido, la palabra era ${palabra}`;
+      lose.textContent = `Has perdido, la palabra era ${palabra}.`;
       linea.append(lose);
 
       section.classList.add('active');
@@ -89,7 +89,7 @@ document.querySelector('#calcular').addEventListener('click', () => {
       linea.append(uriel);
 
       const win = document.createElement('p');
-      win.textContent = `Has ganado`;
+      win.textContent = `Has ganado.`;
       linea.append(win);
 
       section.classList.add('active');
