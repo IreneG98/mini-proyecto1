@@ -14,30 +14,7 @@ const linea = document.querySelector('div p');
 const fallos = document.querySelector('#fallos');
 let arrFallos = new Array();
 const newArray = document.createElement('p');
-const palabras = [
-  'casa',
-  'perro',
-  'gato',
-  'elefante',
-  'sacapuntas',
-  'teclado',
-  'silbato',
-  'arroz',
-  'llama',
-  'tanque',
-  'retrato',
-  'levantamiento',
-  'retrovisor',
-  'peaje',
-  'ventilador',
-  'hoja',
-  'terremoto',
-  'obsequio',
-  'desayuno',
-  'tormenta',
-  'ordenador',
-  'carpeta'
-];
+const palabras = ['casa', 'perro', 'gato', 'elefante', 'sacapuntas', 'teclado'];
 const palabra = palabras[Math.floor(Math.random() * palabras.length)];
 let palabraConGuiones = palabra.replace(/./g, '_ ');
 let contadorFallos = 0;
@@ -45,7 +22,7 @@ let contadorFallos = 0;
 document.querySelector('#output').innerHTML = palabraConGuiones;
 
 document.querySelector('#calcular').addEventListener('click', () => {
-  const letra = document.querySelector('#letra').value.toLowerCase();
+  const letra = document.querySelector('#letra').value;
 
   if (letra == '') {
     return;
@@ -63,8 +40,8 @@ document.querySelector('#calcular').addEventListener('click', () => {
   if (haFallado) {
     contadorFallos++;
     arrFallos.push(letra);
-    let uniqFallos = [...new Set(arrFallos)];
-    newArray.textContent = uniqFallos;
+
+    newArray.textContent = arrFallos;
     fallos.append(newArray);
 
     document.querySelector('#imagen').src = `img/img${contadorFallos}.png`;
